@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333; /* 深绿色 */
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* 增加不透明度 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 1rem 0; /* 增加导航栏的高度 */
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* 深绿色 */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* 稍亮的绿色作为悬停效果 */
+}
+
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    color: #fff; /* 保持白色，以确保在深色背景上可读 */
+    padding-top: 100px; /* 增加顶部内边距，为上移的标题腾出更多空间 */
+    position: relative; /* 添加相对定位 */
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#home h2 {
+    font-size: 3rem; /* 稍微减小名字的字体大小 */
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.main-title {
+    font-size: 10rem; /* 进一步增加字体大小 */
+    color: #FFA500; /* 橙色 */
+    margin-bottom: 3rem; /* 增加底部间距 */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 6px; /* 增加字母间距 */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* 增强文字阴影 */
+    position: absolute; /* 改为绝对定位 */
+    top: 50px; /* 距离顶部的距离 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 确保完全居中 */
+    width: 100%; /* 确保宽度占满 */
+}
+
+.cta-buttons {
+    margin-top: 2rem; /* 减少按钮与上方内容的间距 */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    background-color: #007bff; /* 深绿色 */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* 稍亮的绿色作为悬停效果 */
+}
+
+#about, #achievements {
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    padding: 4rem 2rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.about-text {
+    flex: 2;
+}
+
+#achievements {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.showcase {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: space-between; /* 在行之间均匀分布 */
+    margin-top: 4rem;
+}
+
+.media {
+    display: flex;
+    flex-direction: column; /* 垂直排列视频/图片和文字 */
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 48%; /* 每个媒体项占据48%的宽度 */
+}
+
+.media video {
+    width: 100%; /* 调整视频的宽度 */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; /* 增加底部间距 */
+}
+
+.media img {
+    width: 50%; /* 将照片的大小缩小一半 */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; /* 增加底部间距 */
+}
+
+.media p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: left; /* 左对齐文字 */
+    width: 100%; /* 调整文字介绍的宽度 */
+}
+
+footer {
+    background-color: rgba(0, 100, 0, 0.8); /* 半透明深绿色背景 */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-links {
+    margin-bottom: 1rem; /* 增加与微信号之间的间距 */
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #90EE90; /* 浅绿色作为悬停效果 */
+}
+
+.wechat-info {
+    font-size: 1.2rem; /* 设置字体大小 */
+    color: #fff; /* 设置字体颜色 */
+    margin-top: 1rem; /* 增加顶部间距 */
+}

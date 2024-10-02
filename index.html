@@ -1,0 +1,51 @@
+---
+layout: default
+title: 我的网站
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>{% raw %}{{ page.title }}{% endraw %}</h1>
+        <nav>
+            <ul>
+                {% raw %}{% for item in site.data.navigation %}
+                <li><a href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>
+                    {{ item.name }}
+                </a></li>
+                {% endfor %}{% endraw %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>首页</h2>
+            {% raw %}{{ content }}{% endraw %}
+        </section>
+
+        <section id="about">
+            <h2>关于我</h2>
+            {% raw %}{% include about.html %}{% endraw %}
+        </section>
+
+        <section id="contact">
+            <h2>联系方式</h2>
+            {% raw %}{% include contact.html %}{% endraw %}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {% raw %}{{ site.time | date: '%Y' }}{% endraw %} {% raw %}{{ site.title }}{% endraw %}。保留所有权利。</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
